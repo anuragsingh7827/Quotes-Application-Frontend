@@ -1,0 +1,17 @@
+.content{
+    display: flex;
+    justify-content: center;
+}
+.noComments{
+    text-align: center;
+    border: 4px dashed rgb(230, 230, 230);
+    border-radius: 14px;
+    width: 630px;
+    padding: 100px 0px;
+    color: rgb(114, 114, 114);
+    font-size: 1.2rem;
+}
+.reviewsList{
+    list-style: none;
+    padding: 0px;
+}

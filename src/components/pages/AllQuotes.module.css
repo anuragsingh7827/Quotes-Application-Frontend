@@ -1,0 +1,71 @@
+.wrapper{
+    width: 70px;
+    height: 70px;
+    margin: 300px auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.outer{
+    width: 100%;
+    height: 100%;
+    border-top: 5px solid rgb(27, 141, 132);
+    border-bottom: 5px solid rgb(27, 141, 132);
+    border-left: 5px solid rgba(0,0,0,0);
+    border-right: 5px solid rgba(0,0,0,0);
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: loader 1s linear infinite;
+    
+}
+.inner{
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    border-left: 5px solid rgb(27, 141, 132);
+    border-right: 5px solid rgb(27, 141, 132);
+    border-top: 5px solid rgba(0,0,0,0);
+    border-bottom: 5px solid rgba(0,0,0,0);
+    border-radius: 50%;
+    animation: loader 1s linear infinite reverse;
+}
+@keyframes loader{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.noQuotes{
+    width: 380px;
+    margin: 200px auto;
+    text-align: center;
+}
+.noQuotesHeading{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 3.2rem;
+}
+.btn{
+    margin-top: 20px;
+    border: none;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.15rem;
+    padding: 13px 20px;
+    border-radius: 5px;
+    background-color: rgb(27, 141, 132);
+    color: white;
+    transition: 200ms;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: rgb(42, 190, 178);
+}
+.quotesList{
+    padding: 0px;
+    list-style: none;
+    margin-top: 100px;
+}
+@media screen and (max-width: 800px){
+    body{
+        width: 800px;
+    }
+}

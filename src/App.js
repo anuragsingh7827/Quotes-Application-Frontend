@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Fragment} from 'react';
+import { Route, Routes } from 'react-router-dom';
+import MainNavigation from './components/MainNavigation';
+import AllQuotes from './components/pages/AllQuotes';
+import NewQuote from './components/pages/NewQuote';
+import ShowQuote from './components/pages/ShowQuote';
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <Fragment>
+      <header>
+        <MainNavigation/>
       </header>
-    </div>
-  );
+      <main>
+        <Routes>
+          <Route path="/" element={<AllQuotes/>}/>
+          <Route path="/new" element={<NewQuote/>}/>
+          <Route path="/:quoteid" element={<ShowQuote/>}/>
+        </Routes>
+      </main>
+      
+    </Fragment>
+  )
 }
 
-export default App;
+export default App
+
