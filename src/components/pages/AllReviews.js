@@ -14,7 +14,7 @@ const AllReviews = ({quoteId}) => {
         setisClicked(true);
 
         try{
-            const response = await axios.get(`https://frozen-oasis-84637.herokuapp.com/quotes/${quoteId}/reviews`);
+            const response = await axios.get(`https://great-quotes.onrender.com/quotes/${quoteId}/reviews`);
             response.data ? setreviews(response.data.map((review) => review.comment))
                              : setreviews([]);
 

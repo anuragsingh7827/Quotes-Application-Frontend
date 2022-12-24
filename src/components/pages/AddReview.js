@@ -24,7 +24,7 @@ const AddReview = ({quoteId, addReview}) => {
 
         setisDisabled(true);
         
-        axios.post(`https://frozen-oasis-84637.herokuapp.com/quotes/${quoteId}/reviews`,{
+        axios.post(`https://great-quotes.onrender.com/quotes/${quoteId}/reviews`,{
             comment: commentRef.current.value.trim()
         }).then(() => {
             

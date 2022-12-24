@@ -18,7 +18,7 @@ const NewQuote = () => {
         setisLoading(true);
 
         try{
-            const response = await axios.post('https://frozen-oasis-84637.herokuapp.com/quotes',{
+            const response = await axios.post('https://great-quotes.onrender.com/quotes',{
                 author: authorRef.current.value,
                 text: quoteRef.current.value
             });

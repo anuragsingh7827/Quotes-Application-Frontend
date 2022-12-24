@@ -20,7 +20,7 @@ const ShowQuote = () => {
         async function fetchQuote(){
 
             try{
-                const response = await axios.get(`https://frozen-oasis-84637.herokuapp.com/quotes/${params.quoteid}`);
+                const response = await axios.get(`https://great-quotes.onrender.com/quotes/${params.quoteid}`);
                 const { author, text } = response.data;
                 setquote({
                     author: author,
@@ -48,7 +48,7 @@ const ShowQuote = () => {
     const deleteQuoteHandler = async() => {
 
         setisDeleting(true);
-        await axios.delete(`https://frozen-oasis-84637.herokuapp.com/quotes/${params.quoteid}`);
+        await axios.delete(`https://great-quotes.onrender.com/quotes/${params.quoteid}`);
 
         setisDeleting(false);
         navigate('/');

@@ -15,7 +15,7 @@ const AllQuotes = () => {
         async function fetchAllQuotes(){
 
             try{
-                const response = await axios.get('https://frozen-oasis-84637.herokuapp.com/quotes');
+                const response = await axios.get('https://great-quotes.onrender.com/quotes');
                 setquotes(response.data);
             
                 setisLoading(false);
